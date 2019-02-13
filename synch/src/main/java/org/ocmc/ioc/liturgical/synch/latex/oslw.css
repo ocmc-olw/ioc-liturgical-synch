@@ -1,0 +1,94 @@
+p.DialogItalic {
+  text-align: left;
+  font-size: 1.0em;
+}
+span.TextBlack {
+  font-color: black;
+  font-style: normal;
+  font-weight: normal;
+ }
+span.TextBlackBold {
+  font-color: black;
+  font-style: normal;
+  font-weight: bold;
+ }
+span.TextBlackBoldItalic {
+  font-color: black;
+  font-style: italic;
+  font-weight: bold;
+ }
+span.TextBlackItalic {
+  font-color: black;
+  font-style: italic;
+  font-weight: normal;
+ }
+span.TextBlue {
+  font-color: blue;
+  font-style: normal;
+  font-weight: normal;
+ }
+span.TextBlueBold {
+  font-color: blue;
+  font-style: normal;
+  font-weight: bold;
+ }
+span.TextBlueBoldItalic {
+  font-color: blue;
+  font-style: italic;
+  font-weight: bold;
+ }
+span.TextBlueItalic {
+  font-color: blue;
+  font-style: italic;
+  font-weight: normal;
+ }
+span.TextRed {
+  font-color: red;
+  font-style: normal;
+  font-weight: normal;
+ }
+span.TextRedBold {
+  font-color: red;
+  font-style: normal;
+  font-weight: bold;
+ }
+span.TextRedBoldItalic {
+  font-color: red;
+  font-style: italic;
+  font-weight: bold;
+ }
+span.TextRedItalic {
+  font-color: red;
+  font-style: italic;
+  font-weight: normal;
+ }
+span.EM25 {
+  font-size: 2.5em;
+}
+span.EM20 {
+  font-size: 2.0em;
+}
+span.EM17 {
+  font-size: 1.7em;
+}
+span.EM14 {
+  font-size: 1.4em;
+}
+span.EM12 {
+  font-size: 1.2em;
+}
+span.EM10 {
+  font-size: 1.0em;
+}
+span.EM09 {
+  font-size: 0.9em;
+}
+span.EM08 {
+  font-size: 0.8em;
+}
+span.EM07 {
+  font-size: 0.7em;
+}
+span.EM05 {
+  font-size: 0.5em;
+}

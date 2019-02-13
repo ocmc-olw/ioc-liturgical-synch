@@ -17,8 +17,10 @@ import com.google.gson.JsonElement;
 
 public class GithubServiceTest {
 
-	static String account = "mcolburn";
-	static String repo = "synch-test";
+//	static String account = "mcolburn";
+//	static String repo = "synch-test";
+	static String account = "OCMC-Translation-Projects";
+	static String repo = "service.book.ke.oak";
 //	static String account = "AGES-Initiatives"; // "mcolburn";
 //	static String repo = "ages-alwb-library-gr-gr-cog"; // "synch-test";
 	static String token = "";
