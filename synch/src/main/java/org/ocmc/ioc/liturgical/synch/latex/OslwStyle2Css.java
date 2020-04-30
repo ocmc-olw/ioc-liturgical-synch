@@ -5,10 +5,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
+import java.util.TreeMap;
 
 import org.ocmc.ioc.liturgical.utils.FileUtils;
 
+/**
+ * Reads the OCMC Liturgical LaTeX stylesheet and extracts the formatting
+ * information for each command.
+ * The console will have Enum values to add to:
+ * org.ocmc.ioc.liturgical.schemas.constants.TEMPLATE_NODE_TYPES.
+ * 
+ * Insert them before WHEN_DATE_IS, replace all current values above that point.
+ * @author mac002
+ *
+ */
 public class OslwStyle2Css {
 	
 	/**
@@ -42,8 +54,6 @@ public class OslwStyle2Css {
 						cmd = cmd.replace("}{", "{");
 						String parts[] = cmd.split("\\{");
 						command = parts[1];
-//						String args = parts[2].trim();
-//						String cnt[] = args.split(" ");
 					} else if (cmd.contains(cmdLineAlt)) {
 						cmd = cmd.replace("\\"+cmdLineAlt + "{\\lt", "{");
 						cmd = cmd.replace("}[", "{");
@@ -67,11 +77,24 @@ public class OslwStyle2Css {
 //					System.out.println(metaCmd.toJsonString());
 					StringBuffer sb = new StringBuffer();
 					sb.append("	, ");
-					sb.append(metaCmd.cmdName.toUpperCase());
+					sb.append(metaCmd.cmdName);
 					sb.append("(\"");
 					sb.append(metaCmd.cmdName);
 					sb.append("\", \"");
 					sb.append(metaCmd.cmdName);
+					String lastFormat = "";
+					for (int i=0; i < 4; i++) {
+						sb.append("\", \"");
+						try {
+						String format = metaCmd.argFormats.get(i);
+						if (format != null) {
+							lastFormat = format;
+						}
+						} catch (Exception e) {
+							// ignore
+						}
+						sb.append(lastFormat);
+					}
 					sb.append("\")");
 					commands.add(sb.toString());
 				}
